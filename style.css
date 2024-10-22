@@ -40,8 +40,8 @@ body {
 }
 
 .custom-position {
-  top: 25vh; 
-  left: 28vw; 
+  top: 20vh; 
+  left: 32vw; 
   transform: translate(-50%, -50%) rotate(35deg); 
 }
 
