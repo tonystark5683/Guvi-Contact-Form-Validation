@@ -35,12 +35,12 @@ body {
 }
 
 .bottom-left {
-  bottom: -28vh; 
+  bottom: -20vh; 
   left: 5vw;
 }
 
 .custom-position {
-  top: 18vh; 
+  top: 25vh; 
   left: 28vw; 
   transform: translate(-50%, -50%) rotate(35deg); 
 }
