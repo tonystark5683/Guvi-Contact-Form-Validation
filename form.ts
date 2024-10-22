@@ -4,11 +4,11 @@ function validateEmail(email: string): boolean {
 }
 
 function validateContact(contact: string): boolean {
-    const re = /^\d{10}$/; // Regex for exactly 10 digits
+    const re = /^\d{10}$/; 
     return re.test(contact);
 }
 
-// Function to display modal message
+
 function showModal(message: string) {
     const modal = document.getElementById('modal') as HTMLElement;
     const modalMessage = document.getElementById('modalMessage') as HTMLElement;
@@ -16,11 +16,9 @@ function showModal(message: string) {
     modal.style.display = 'block';
 }
 
-// Function to handle form submission
 async function handleSubmit(event: Event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const form = event.target as HTMLFormElement; // Get the form element
+    event.preventDefault(); 
+    const form = event.target as HTMLFormElement;
     const name = (document.getElementById('name') as HTMLInputElement).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const contact = (document.getElementById('contact') as HTMLInputElement).value;
@@ -43,7 +41,6 @@ async function handleSubmit(event: Event) {
         return;
     }
 
-    // Prepare data for submission
     const formData = {
         name,
         email,
@@ -69,7 +66,7 @@ async function handleSubmit(event: Event) {
         showModal('Form Submitted Successfully');
         console.log('Success:', result);
 
-        // Reset the form fields
+
         form.reset();
     } catch (error) {
         showModal('Submission Failed');
@@ -77,28 +74,27 @@ async function handleSubmit(event: Event) {
     }
 }
 
-// Attach the submit event listener to the form
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', handleSubmit);
     }
 
-    // Close the modal when the user clicks on <span> (x)
+
     const closeModal = document.getElementById('closeModal') as HTMLElement;
     closeModal.onclick = () => {
         const modal = document.getElementById('modal') as HTMLElement;
         modal.style.display = 'none';
     };
 
-    // Close the modal when the user clicks on OK button
     const confirmModal = document.getElementById('confirmModal') as HTMLElement;
     confirmModal.onclick = () => {
         const modal = document.getElementById('modal') as HTMLElement;
         modal.style.display = 'none';
     };
 
-    // Close the modal when the user clicks outside of the modal content
+
     window.onclick = (event) => {
         const modal = document.getElementById('modal') as HTMLElement;
         if (event.target === modal) {
