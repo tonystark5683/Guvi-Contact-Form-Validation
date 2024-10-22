@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="form.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay top-right"></div>
+      <div class="overlay bottom-left"></div>
+      <div class="overlay custom-position"></div>
+      <div class="sub-container">
+        <!-- Left Side - Contact Info -->
+        <div class="leftSide">
+          <div class="heading">
+            <h2>Contact Us</h2>
+            <p>
+              Let us know your queries, feedbacks and enquiries. We are here to
+              support you 24/7.
+            </p>
+          </div>
+          <hr />
+          <div class="contact-item">
+            <img src="./images/telephone.png" alt="" />
+            <div class="contact-item-content">
+              <p>Give us a Call</p>
+              <span>+91 9736097320</span>
+            </div>
+          </div>
+          <hr />
+          <div class="contact-item">
+            <img src="./images/mail.png" alt="" />
+            <div class="contact-item-content">
+              <p>Write to us</p>
+              <span>cs@guvi.in</span>
+            </div>
+          </div>
+          <hr />
+          <div class="contact-item address">
+            <img src="./images/address.png" alt="" />
+            <div class="adrress-container">
+              <div class="contact-item-content">
+                <p>Visit us in Chennai @</p>
+                <span
+                  >IITM Research park - phase 2, module #9, 3rd floor, D block,
+                  Kanagam Rd, Tharamani, Chennai, Tamil Nadu 600113</span
+                >
+              </div>
+              <div class="contact-item-content">
+                <p>Visit us in Noida @</p>
+                <span
+                  >A11, HCL Corporation Pvt. Ltd, Block A, Sector 3, Noida,
+                  Uttar Pradesh 201307</span
+                >
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+
+        <!-- Right Side - Form Section -->
+        <div class="rightSide">
+          <div class="right-side-content">
+            <h2>Say <span class="highlight">Hello!</span></h2>
+            <p>Feel free to stop by and say hi !</p>
+            <form action="#">
+              <div class="form-group">
+                <label for="name">Name <span class="highlight">*</span></label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email"
+                  >E-mail ID <span class="highlight">*</span></label
+                >
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="contact"
+                  >Contact Number <span class="highlight">*</span></label
+                >
+                <input type="text" id="contact" name="contact" required />
+              </div>
+              <div class="form-group">
+                <label for="subject"
+                  >Subject <span class="highlight">*</span></label
+                >
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message"
+                  >Message <span class="highlight">*</span></label
+                >
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Notification</h2>
+        <p id="modalMessage">Message goes here!</p>
+        <button id="confirmModal" class="btn">OK</button>
+      </div>
+    </div>
+  </body>
+</html>
